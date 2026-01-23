@@ -1,0 +1,120 @@
+@import url('global.css');
+
+/* =========================
+   BASE LAYOUT
+========================= */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #cfd9df;
+  position: relative;
+  filter: contrast(1.05) saturate(0.92);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Ensure footer stays at bottom */
+footer {
+  margin-top: auto;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 3rem 2rem;
+  border-bottom: 1px solid rgba(140,200,255,0.12);
+  text-align: center;
+  z-index: 5;
+}
+
+.hero h1 {
+  font-family: var(--font-main);
+  font-size: 2.6rem;
+  color: var(--hover-color);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #7fa6bb;
+  text-transform: uppercase;
+}
+
+/* =========================
+   FILE GRID LAYOUT
+========================= */
+.files {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================
+   FILE CARD
+========================= */
+.file {
+  background: rgba(4,12,18,0.35);
+  border-left: 2px solid var(--border-left-color);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.file.locked {
+  border-left-color: rgba(255,63,63,0.4);
+}
+
+.file-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #6f8fa0;
+}
+
+.file h3 {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  margin: 0.8rem 0;
+  color: #cfefff;
+}
+
+.file p {
+  font-size: 0.85rem;
+  color: #a9c6d6;
+  line-height: 1.6;
+}
+
+/* =========================
+    META TAGS
+========================= */
+.file-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.file-meta span {
+  font-size: 0.6rem;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid rgba(120,170,200,0.25);
+  color: #8aa9bb;
+  letter-spacing: 0.15em;
+}
+
+/* =========================
+    RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .files {
+    grid-template-columns: 1fr;
+  }
+}

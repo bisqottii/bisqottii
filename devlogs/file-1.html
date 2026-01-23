@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building an ECS | CIA Cold War Log</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="file-1.css">
+
+  <!-- Prism.js CSS for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CRT / ENVIRONMENT LAYERS -->
+  <div class="noise"></div>
+  <div class="crt-bezel"></div>
+  <div class="sync-line"></div>
+  <div class="scanlines"></div>
+  <div class="numbers"></div>
+  <div class="chair"></div>
+  <div class="atmosphere"></div>
+
+  <!-- Top bar -->
+  <header class="top-bar">
+    <span class="status">SECURE CHANNEL</span>
+    <span class="location">FILE LOGGED</span>
+  </header>
+
+  <!-- Hero / Mission header -->
+  <header class="hero-profile">
+    <h1>BUILDING AN ECS IN MODERN C++</h1>
+    <p>CLASSIFIED DOCUMENT | JANUARY 2026</p>
+  </header>
+
+  <!-- Main devlog content -->
+  <main class="layout">
+
+    <article class="excerpt">
+      <time>January 17, 2026 | Classified</time>
+
+      <div class="post-content">
+
+        <p>Designing a high-performance Entity-Component-System (ECS) framework requires careful consideration of memory layout and cache efficiency. This document outlines the preliminary implementation strategy for a modern C++ ECS.</p>
+
+        <p>Key objectives include:</p>
+        <ul>
+          <li>Cache-friendly component storage using <code>structure-of-arrays</code> layout.</li>
+          <li>Sparse sets for efficient entity management.</li>
+          <li>Minimizing cache misses during iteration over components.</li>
+          <li>Ensuring multi-threaded safety without sacrificing performance.</li>
+        </ul>
+
+        <div class="transmission-break">TRANSMISSION INTERRUPTED</div>
+
+        <h3>Core Algorithms</h3>
+        <p>Critical algorithms for component access and entity iteration are considered <span class="redacted">[REDACTED]</span>. Only authorized personnel are permitted to view the underlying implementation details.</p>
+
+        <!-- C++ Code Block with Prism -->
+        <pre><code class="language-cpp">
+// Example: Sparse Set ECS Component
+struct Position { float x, y, z; };
+SparseSet<Position> positions;
+for (auto entity : entities) {
+    Position &pos = positions[entity];
+    pos.x += velocity[entity].x;
+    pos.y += velocity[entity].y;
+    pos.z += velocity[entity].z;
+}
+        </code></pre>
+
+        <p>Further optimizations may include memory pooling, archetype-based grouping, and tight packing of components to improve spatial locality.</p>
+
+        <a href="#" class="file-link">Download ECS Reference</a>
+        <a href="#" class="file-link button-disabled">Restricted: Top Secret</a>
+
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>CLASSIFIED // EYES ONLY</span>
+    <span>VANCOUVER B.C.</span>
+  </footer>
+
+  <!-- Prism.js JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/components/prism-cpp.min.js"></script>
+  <script src="../js/pagechange.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+@import url('global.css');
+
+/* =========================
+  RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+  BASE
+========================= */
+body {
+  min-height: 100vh;
+  color: #cfd9df;
+  overflow: hidden;
+  position: relative;
+  filter: contrast(1.05) saturate(0.92);
+
+  /* LAYOUT */
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+body.fade-in {
+  opacity: 1;
+}
+
+/* =========================
+  NUMBERS STATION
+========================= */
+.numbers {
+  position: fixed;
+  inset: 0;
+  font-size: 0.75rem;
+  color: rgba(160,210,220,0.25);
+  font-family: monospace;
+  letter-spacing: 0.2em;
+  padding: 3rem;
+  white-space: pre-wrap;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.numbers::before {
+  content:
+    "17 03 91 44 08\n"
+    "61 22 09 73 55\n"
+    "04 19 88 02 67\n"
+    "71 60 13 45 99";
+}
+
+/* =========================
+  INTERROGATION CHAIR
+========================= */
+.chair {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.55),
+    transparent 70%
+  );
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =========================
+  TITLE
+========================= */
+.title {
+  position: relative;
+  font-size: 4.6rem;
+  color: #b8e6ff;
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: 2.8rem;
+  text-shadow:
+    0 0 4px rgba(140,200,255,0.18),
+    0 0 8px rgba(140,200,255,0.12),
+    2px 2px 0 #000;
+}
+
+.title.active {
+  animation: title-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes title-glow {
+  from { text-shadow: 0 0 4px rgba(140,200,255,0.18); }
+  to { text-shadow: 0 0 10px rgba(39,225,250,0.8), 0 0 20px rgba(39,225,250,0.5); }
+}
+
+/* =========================
+  MENU OPTIONS
+========================= */
+.menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6rem;
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+  BRIEFING OVERLAY START
+============================================================ */
+
+/* Safety: hide briefing unless JS enables it */
+body:not(.briefing) #briefing {
+  display: none;
+}
+
+#briefing {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: #9df2ff;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  padding: 3rem;
+  z-index: 10000;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#briefing-text {
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* Hide UI while briefing runs */
+body.briefing header,
+body.briefing main,
+body.briefing footer {
+  opacity: 0;
+}
+
+/* =========================
+   BLOCK CURSOR WHILE TYPING
+========================= */
+
+.typing-block {
+  display: inline-block;
+  color: #9df2ff;
+}
+
+/* Only blink when idle */
+.typing-block.blink {
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* =========================
+   SCANLINE SWEEP (EXIT)
+========================= */
+
+#briefing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.05) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+#briefing.sweep::after {
+  opacity: 1;
+  animation: scan-sweep 0.6s linear forwards;
+}
+
+@keyframes scan-sweep {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(100%); }
+}
+
+/* =========================================================
+  BRIEFING OVERLAY END
+============================================================ */

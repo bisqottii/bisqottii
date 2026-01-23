@@ -1,0 +1,11 @@
+:root {
+  --background-color: radial-gradient(circle at center, #0b1a22, #020608 75%);
+  --border-left-color: #8ccfff;
+  --hover-color: #e6f6ff;
+
+  --font-main: 'Orbitron', sans-serif;
+  --font-color: #f5f5f5;
+  
+  --letter-spacing-wide: 0.18em;
+  --letter-spacing-narrow: 0.08em;
+}
