@@ -1,0 +1,47 @@
+.file-card {
+    background: rgba(4,12,18,0.35);
+    border-left: 2px solid var(--border-left-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.file-card.locked {
+  border-left-color: rgba(255,63,63,0.4);
+}
+
+.file-card-header {
+  display: flex;
+  padding-bottom: 1em;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #6f8fa0;
+}
+
+.file-card h3 {
+  margin: 0.8rem 0;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: #cfefff;
+}
+
+.file-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #a9c6d6;
+}
+
+.file-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.file-card-meta span {
+  font-size: 0.6rem;
+  padding: 0.15rem 0.4rem;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(120,170,200,0.25);
+  color: #8aa9bb;
+}

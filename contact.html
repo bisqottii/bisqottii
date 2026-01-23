@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 
 </head>
-    <body>
-
+<body>
     <div class="noise"></div>
     <div class="crt-bezel"></div>
     <div class="sync-line"></div>
@@ -29,7 +28,7 @@
         <h1 class="title glitch-in">SECURE CONTACT</h1>
         <p class="glitch-in">Transmit message via encrypted channel. Identity verification recommended.</p>
 
-        <form>
+        <form id="contact-form" autocomplete="off">
             <label class="glitch-in" for="name">CALLSIGN</label>
             <input class="glitch-in" id="name" type="text" placeholder="YOUR NAME" required />
 
@@ -43,7 +42,6 @@
             <textarea class="glitch-in" id="message" placeholder="ENTER MESSAGE" required></textarea>
 
             <button class="glitch-in" type="submit">TRANSMIT</button>
-
         </form>
 
         <div class="contact-footer glitch-in">CLASSIFIED</div>
@@ -56,8 +54,9 @@
         <span>VANCOUVER B.C.</span>
     </footer>
 
-    <script src="../js/generaleffects.js"></script>
-    <script src="../js/pagechange.js"></script>
+    <script src="js/generaleffects.js"></script>
+    <script src="js/pagechange.js"></script>
+    <script src="js/contact.js"></script>
 
     </body>
 </html>

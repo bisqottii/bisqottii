@@ -1,0 +1,23 @@
+.title {
+  color: #b8e6ff;
+  letter-spacing: var(--letter-spacing-wide);
+  text-shadow:
+    0 0 4px rgba(140,200,255,0.18),
+    0 0 8px rgba(140,200,255,0.12),
+    2px 2px 0 #000;
+}
+
+.title.active {
+  animation: title-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes title-glow {
+  from {
+    text-shadow: 0 0 4px rgba(140,200,255,0.18);
+  }
+  to {
+    text-shadow:
+      0 0 10px rgba(39,225,250,0.8),
+      0 0 20px rgba(39,225,250,0.5);
+  }
+}

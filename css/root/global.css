@@ -1,0 +1,91 @@
+/* ======================================================
+   BASE
+====================================================== */
+
+* {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  background: var(--background-color);
+  z-index: 1;
+}
+
+/* Ensure footer sticks to bottom */
+footer {
+  margin-top: auto;
+}
+
+/* ======================================================
+   KEYFRAMES
+====================================================== */
+
+@keyframes wiggle {
+  0%   { transform: skewX(24deg); }
+  10%  { transform: skewX(-8deg); }
+  20%  { transform: skewX(55deg); }
+  30%  { transform: skewX(-90deg); }
+  40%  { transform: skewX(29deg); }
+  50%  { transform: skewX(-90deg); }
+  60%  { transform: skewX(3deg); }
+  70%  { transform: skewX(-2deg); }
+  80%  { transform: skewX(1deg); }
+  90%  { transform: skewX(10deg); }
+  100% { transform: skewX(0deg); }
+}
+
+@keyframes scan-drift {
+  from { background-position: 0 0; }
+  to   { background-position: 0 120px; }
+}
+
+@keyframes sync-roll {
+  to { transform: translateY(140vh); }
+}
+
+@keyframes glitch-in {
+  0%   { opacity: 0; transform: translateX(-8px); }
+  20%  { opacity: 1; transform: translateX(6px); }
+  40%  { transform: translateX(-4px); }
+  60%  { transform: translateX(2px); }
+  100% { transform: translateX(0); text-shadow: none; }
+}
+
+/* ======================================================
+   UI LAYER STACKING
+====================================================== */
+
+.numbers,
+.chair,
+.menu,
+.top-bar,
+.footer,
+.crt-bezel,
+.sync-line,
+.scanlines,
+.atmosphere {
+  z-index: 1;
+}
+
+/* ======================================================
+   SCROLLBAR (HIDDEN)
+====================================================== */
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+  display: none;
+}

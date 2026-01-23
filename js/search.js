@@ -1,6 +1,6 @@
 const searchBox = document.getElementById("searchBox");
 const sortSelect = document.getElementById("sortSelect");
-const articles = document.querySelectorAll(".excerpt");
+const articles = document.querySelectorAll(".file-card");
 const tagLinks = document.querySelectorAll(".search-tags a");
 const content = document.querySelector(".content");
 

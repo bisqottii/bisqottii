@@ -1,51 +1,51 @@
-@import url('global.css');
+@import url("root/variables.css");
+@import url("root/global.css");
 
-/* =========================
-  RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("effects/crt.css");
+@import url("effects/glitchin.css");
+@import url("effects/links.css");
 
-/* =========================
-  BASE
-========================= */
+@import url("layout/headerfooter.css");
+
+/* ======================================================
+   BASE
+====================================================== */
+
 body {
   min-height: 100vh;
-  color: #cfd9df;
-  overflow: hidden;
   position: relative;
-  filter: contrast(1.05) saturate(0.92);
+  overflow: hidden;
 
-  /* LAYOUT */
   display: flex;
   flex-direction: column;
-}
 
-body {
+  color: #cfd9df;
+  filter: contrast(1.05) saturate(0.92);
+
   opacity: 0;
   transition: opacity 0.2s ease;
 }
+
 body.fade-in {
   opacity: 1;
 }
 
-/* =========================
-  NUMBERS STATION
-========================= */
+/* ======================================================
+   NUMBERS STATION
+====================================================== */
+
 .numbers {
   position: fixed;
   inset: 0;
+  z-index: 3;
+  pointer-events: none;
+
+  padding: 3rem;
   font-size: 0.75rem;
-  color: rgba(160,210,220,0.25);
   font-family: monospace;
   letter-spacing: 0.2em;
-  padding: 3rem;
   white-space: pre-wrap;
-  pointer-events: none;
-  z-index: 3;
+  color: rgba(160,210,220,0.25);
 }
 
 .numbers::before {
@@ -56,35 +56,41 @@ body.fade-in {
     "71 60 13 45 99";
 }
 
-/* =========================
-  INTERROGATION CHAIR
-========================= */
+/* ======================================================
+   INTERROGATION CHAIR
+====================================================== */
+
 .chair {
   position: fixed;
   bottom: 0;
   left: 50%;
+  z-index: 1;
+  pointer-events: none;
+
   width: 300px;
   height: 400px;
   transform: translateX(-50%);
+  opacity: 0.35;
+
   background: radial-gradient(
     ellipse at center,
     rgba(0,0,0,0.55),
     transparent 70%
   );
-  opacity: 0.35;
-  pointer-events: none;
-  z-index: 1;
 }
 
-/* =========================
-  TITLE
-========================= */
+/* ======================================================
+   TITLE
+====================================================== */
+
 .title {
   position: relative;
-  font-size: 4.6rem;
-  color: #b8e6ff;
-  letter-spacing: var(--letter-spacing-wide);
   margin-bottom: 2.8rem;
+
+  font-size: 4.6rem;
+  letter-spacing: var(--letter-spacing-wide);
+  color: #b8e6ff;
+
   text-shadow:
     0 0 4px rgba(140,200,255,0.18),
     0 0 8px rgba(140,200,255,0.12),
@@ -96,13 +102,20 @@ body.fade-in {
 }
 
 @keyframes title-glow {
-  from { text-shadow: 0 0 4px rgba(140,200,255,0.18); }
-  to { text-shadow: 0 0 10px rgba(39,225,250,0.8), 0 0 20px rgba(39,225,250,0.5); }
+  from {
+    text-shadow: 0 0 4px rgba(140,200,255,0.18);
+  }
+  to {
+    text-shadow:
+      0 0 10px rgba(39,225,250,0.8),
+      0 0 20px rgba(39,225,250,0.5);
+  }
 }
 
-/* =========================
-  MENU OPTIONS
-========================= */
+/* ======================================================
+   MENU
+====================================================== */
+
 .menu {
   flex: 1;
   display: flex;
@@ -111,88 +124,37 @@ body.fade-in {
   padding-left: 6rem;
 }
 
+/* ======================================================
+  START UP SCREEN
+====================================================== */
 
-
-
-
-
-
-
-/* =========================================================
-  BRIEFING OVERLAY START
-============================================================ */
-
-/* Safety: hide briefing unless JS enables it */
-body:not(.briefing) #briefing {
-  display: none;
-}
-
-#briefing {
+.start-up-screen {
   position: fixed;
   inset: 0;
-  background: #000;
-  color: #9df2ff;
-  font-family: var(--font-main);
-  font-size: 0.9rem;
-  padding: 3rem;
   z-index: 10000;
+  pointer-events: none;
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  background: #000;
+  opacity: 1;
 }
 
-#briefing-text {
-  max-width: 720px;
-  line-height: 1.6;
-}
-
-/* Hide UI while briefing runs */
-body.briefing header,
-body.briefing main,
-body.briefing footer {
-  opacity: 0;
-}
-
-/* =========================
-   BLOCK CURSOR WHILE TYPING
-========================= */
-
-.typing-block {
-  display: inline-block;
-  color: #9df2ff;
-}
-
-/* Only blink when idle */
-.typing-block.blink {
-  animation: blink 1s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-/* =========================
-   SCANLINE SWEEP (EXIT)
-========================= */
-
-#briefing::after {
+.start-up-screen::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.05),
-      rgba(255,255,255,0.05) 1px,
-      transparent 1px,
-      transparent 4px
-    );
-  opacity: 0.25;
   pointer-events: none;
+  opacity: 0.25;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 4px
+  );
 }
 
-#briefing.sweep::after {
+.start-up-screen.sweep::after {
   opacity: 1;
   animation: scan-sweep 0.6s linear forwards;
 }
@@ -202,6 +164,4 @@ body.briefing footer {
   to   { transform: translateY(100%); }
 }
 
-/* =========================================================
-  BRIEFING OVERLAY END
-============================================================ */
+

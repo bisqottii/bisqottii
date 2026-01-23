@@ -1,0 +1,18 @@
+.tag-active,
+.tag-locked {
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  padding: 0 0.3rem;
+  border-radius: 2px;
+}
+
+.tag-active {
+  background: rgba(0,145,255,0.33);
+  color: var(--hover-color);
+}
+
+.tag-locked {
+  background: rgba(255,63,63,0.2);
+  color: #ff6f6f;
+}

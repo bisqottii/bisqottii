@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FILE-001</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/logs.css"/>
+</head>
+
+<body>
+  <!-- LAYERS -->
+  <div class="noise"></div>
+  <div class="crt-bezel"></div>
+  <div class="sync-line"></div>
+  <div class="scanlines"></div>
+  <div class="atmosphere"></div>
+
+  <header class="top-bar">
+    <span class="status">SECURE CHANNEL</span>
+    <span class="location">FILE-001</span>
+  </header>
+
+  <!-- Page 1 -->
+  <div class="page glitch-in">
+    <div class="classification top-secret">TOP SECRET</div>
+    <div class="stamp">DECLASSIFIED</div>
+    
+    <div class="header">
+      <h1>Designing an Intermediate Representation as a Language</h1>
+      <h2>Directorate of Plans</h2>
+    </div>
+
+    <div class="meta">
+      <div><strong>File No:</strong> 7A-1142-B</div>
+      <div><strong>Date:</strong> 12 October 1962</div>
+      <div><strong>Subject:</strong> Unusual Activity in Sector 7G – Western Hemisphere</div>
+    </div>
+
+    <div class="content">
+      
+      <div class="memo-image">
+        <img src="../../assets/compiler/file-1.png" alt="Perimeter surveillance photo">
+        <div class="caption">Figure 1: Surveillance capture of Sector 7G.</div>
+      </div>
+
+      <p>
+        Reports indicate a significant increase in operational traffic 
+        across multiple observation posts. Personnel movements appear 
+        coordinated, but the purpose remains unclear.
+      </p>
+      
+      <p>
+        Technical scans suggest the presence of unknown devices, 
+        possibly experimental in nature. Analysis of intercepted 
+        communications shows unusual encoding patterns, requiring 
+        further cryptographic examination.
+      </p>
+      
+      <p>
+        Recommendation: Maintain heightened surveillance, log all
+        anomalies, and restrict briefings to authorized personnel
+        only. Ensure all reconnaissance units adhere strictly to
+        operational protocols and secure communication channels.
+      </p>
+    </div>
+
+    <footer class="doc-footer">
+      <span>HANDLE VIA COMINT CHANNELS ONLY</span>
+    </footer>
+    <div class="page-number">Page 1 of 3</div>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page glitch-in">
+    <div class="header">
+      <h1>Central Intelligence Agency</h1>
+      <h2>Directorate of Plans</h2>
+    </div>
+
+    <div class="content">
+      <p>Designing a high-performance Entity-Component-System (ECS) framework requires careful consideration...</p>
+      <ul>
+        <li>Cache-friendly component storage using structure-of-arrays layout.</li>
+        <li>Sparse sets for efficient entity management.</li>
+        <li>Minimizing cache misses during iteration over components.</li>
+        <li>Ensuring multi-threaded safety without sacrificing performance.</li>
+      </ul>
+      <p>Core algorithms for component access and entity iteration are considered <span class="redacted">[REDACTED]</span>.</p>
+    </div>
+
+    <footer class="doc-footer">
+      <span>HANDLE VIA COMINT CHANNELS ONLY</span>
+    </footer>
+    <div class="page-number">Page 2 of 3</div>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page glitch-in">
+    <div class="header">
+      <h1>Central Intelligence Agency</h1>
+      <h2>Directorate of Plans</h2>
+    </div>
+
+    <div class="content">
+      <div class="code-block">
+        <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Agent {
+public:
+    string name;
+    bool authorized;
+
+    Agent(string n, bool a) : name(n), authorized(a) {}
+
+    void accessMission() {
+        if (authorized) {
+          cout &lt;&lt; "Access granted" &lt;&lt; name &lt;&lt; endl;
+        } else {
+          cout &lt;&lt; "Access denied." &lt;&lt; endl;
+        }
+    }
+};
+
+int main() {
+    Agent agent("Bond", true);
+    agent.accessMission();
+    return 0;
+}
+        </code></pre>
+      </div>
+
+      <p>Further optimizations may include memory pooling, archetype-based grouping, and tight packing of components to improve spatial locality.</p>
+    </div>
+
+    <footer class="doc-footer">
+      <span>HANDLE VIA COMINT CHANNELS ONLY</span>
+    </footer>
+    <div class="page-number">Page 3 of 3</div>
+  </div>
+
+  <footer class="footer">
+    <span>CLASSIFIED // EYES ONLY</span>
+    <span>OPERATION DATABASE</span>
+  </footer>
+
+  <script src="../../js/generaleffects.js"></script>
+  <script src="../../js/pagechange.js"></script>
+
+</body>
+</html>

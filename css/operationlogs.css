@@ -1,87 +1,65 @@
-@import url('global.css');
+@import url("root/variables.css");
+@import url("root/global.css");
 
-/* =========================================================
+@import url("effects/crt.css");
+@import url("effects/glitchin.css");
+@import url("effects/links.css");
+
+@import url("layout/headerfooter.css");
+@import url("layout/hero.css");
+
+@import url("styles/redacted.css");
+@import url("styles/tags.css");
+@import url("styles/titleglitch.css");
+@import url("styles/filecards.css");
+
+/* ======================================================
    RESET & BASE
-========================================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+====================================================== */
 
 html {
   font-size: 17px;
 }
 
 body {
-  margin: 0;
-  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
   color: #cfd9df;
+  filter: contrast(1.05) saturate(0.92);
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* =========================================================
+/* ======================================================
    TOP BAR (COMMAND HEADER)
-========================================================= */
+====================================================== */
 
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem 2rem;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-main);
   font-size: 1rem;
   letter-spacing: 0.2em;
   color: #9fd4ff;
 }
 
-/* =========================================================
-   HERO
-========================================================= */
-.hero {
-  border-bottom: 1px solid rgba(120,170,200,0.12);
-}
-
-.hero-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-}
-
-.hero h2 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 2.4rem;
-  letter-spacing: 0.18em;
-  color: #b8e6ff;
-  position: relative;
-}
-
-/* MICRO-GLITCH STATIC IN HERO */
-.hero h2::after {
-  content: attr(data-glitch);
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #cfefff;
-  opacity: 0.12;
-  clip-path: inset(0 40% 0 0);
-}
-
-.hero p {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  color: #7fa6bb;
-  text-transform: uppercase;
-}
-
-/* =========================================================
-   LAYOUT
-========================================================= */
-.layout {
+/* ======================================================
+  FILES
+====================================================== */
+.files {
+  z-index: 5;
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
@@ -90,10 +68,13 @@ body {
   padding: 3rem 2rem;
 }
 
-/* =========================================================
-  ARTICLES (DOSSIER CARDS)
-========================================================= */
-.excerpt-banner {
+.files time {
+  font-size: 0.65rem;
+  color: #6f8fa0;
+  letter-spacing: 0.2em;
+}
+
+.file-banner {
   display: block;
   width: 100%;
   max-height: 200px;
@@ -102,95 +83,55 @@ body {
   margin-bottom: 1rem;
 }
 
-
-.excerpt {
-  border-left: 2px solid rgba(120,170,200,0.25);
-  padding: 1.5rem 1.5rem 1.5rem 2rem;
+.file-card {
   margin-bottom: 2.5rem;
-  background: rgba(4,12,18,0.35);
-  position: relative;
 }
 
-/* TIME */
-.excerpt time {
-  font-size: 0.65rem;
-  color: #6f8fa0;
-  letter-spacing: 0.2em;
-}
-
-/* HEADINGS */
-.excerpt h3 {
-  font-family: var(--font-main);
-  font-size: 1.2rem;
-  margin: 0.6rem 0;
-  letter-spacing: 0.1em;
-  position: relative;
-}
-
-/* MICRO-GLITCH IN HEADINGS */
-.excerpt h3::after {
-  content: attr(data-glitch);
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #cfefff;
-  opacity: 0.12;
-  clip-path: inset(0 50% 0 0);
-}
-
-.excerpt h3 a {
-  text-decoration: none;
-  color: #cfefff;
-}
-
-.excerpt h3 a:hover {
-  color: #ffffff;
-}
-
-/* BODY TEXT */
-.excerpt p {
-  font-size: 0.85rem;
-  color: #a9c6d6;
-}
-
-/* =========================================================
+/* ======================================================
    TRANSMISSION INTERRUPTED
-========================================================= */
+====================================================== */
+
 .transmission-break {
+  margin: 3rem 0;
+  padding: 0.5rem 0;
+
   text-align: center;
+  text-transform: uppercase;
+
   font-family: var(--font-main);
-  color: #ff5555;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
-  margin: 3rem 0;
-  text-transform: uppercase;
+  color: #ff5555;
+
   border-top: 1px dashed rgba(255,85,85,0.3);
   border-bottom: 1px dashed rgba(255,85,85,0.3);
-  padding: 0.5rem 0;
 
   animation: flicker 2s infinite;
 }
 
 @keyframes flicker {
   0%, 100% { opacity: 0.5; }
-  45% { opacity: 0.2; }
-  50% { opacity: 0.6; }
-  55% { opacity: 0.25; }
+  45%      { opacity: 0.2; }
+  50%      { opacity: 0.6; }
+  55%      { opacity: 0.25; }
 }
 
-/* =========================================================
+/* ======================================================
    SIDEBAR (INTEL PANEL)
-========================================================= */
+====================================================== */
+
 .sidebar {
-  border-left: 1px solid rgba(120,170,200,0.15);
   padding-left: 2rem;
+  border-left: 1px solid rgba(120,170,200,0.15);
 }
 
 .search {
   width: 100%;
   padding: 0.6rem;
+
   background: rgba(0,0,0,0.4);
   border: 1px solid rgba(120,170,200,0.25);
+
   color: #cfd9df;
   font-family: inherit;
   font-size: 0.75rem;
@@ -198,6 +139,7 @@ body {
 
 .sidebar h4 {
   margin: 2rem 0 0.6rem;
+
   font-family: var(--font-main);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
@@ -206,7 +148,6 @@ body {
 
 .search-tags {
   list-style: none;
-  padding: 0;
 }
 
 .search-tags li {
@@ -214,46 +155,26 @@ body {
 }
 
 .search-tags a {
+  font-size: 0.7rem;
   text-decoration: none;
   color: #8aa9bb;
-  font-size: 0.7rem;
 }
 
 .search-tags a.active {
-  color: #9fd4ff;
   font-weight: bold;
+  color: #9fd4ff;
 }
 
 .search-tags a:hover {
   color: #e6f6ff;
 }
 
-/* =========================
-    TITLE
-========================= */
-.title {
-    color: #b8e6ff;
-    letter-spacing: var(--letter-spacing-wide);
-    text-shadow:
-        0 0 4px rgba(140,200,255,0.18),
-        0 0 8px rgba(140,200,255,0.12),
-        2px 2px 0 #000;
-}
-
-.title.active {
-    animation: title-glow 3s ease-in-out infinite alternate;
-}
-
-@keyframes title-glow {
-    from { text-shadow: 0 0 4px rgba(140,200,255,0.18); }
-    to { text-shadow: 0 0 10px rgba(39,225,250,0.8), 0 0 20px rgba(39,225,250,0.5); }
-}
-
-/* =========================================================
+/* ======================================================
    MOBILE
-========================================================= */
+====================================================== */
+
 @media (max-width: 900px) {
-  .layout {
+  .files {
     grid-template-columns: 1fr;
   }
 

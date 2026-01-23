@@ -1,0 +1,277 @@
+@import url("root/variables.css");
+@import url("root/global.css");
+
+@import url("effects/crt.css");
+@import url("effects/glitchin.css");
+
+@import url("layout/headerfooter.css");
+
+@import url("styles/redacted.css");
+
+/* ======================================================
+  BASE DOCUMENT CONTAINER
+====================================================== */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  color: #cfd9df;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ======================================================
+   CIA DOCUMENT PAGE
+====================================================== */
+
+.page {
+  width: 800px;
+  min-height: 1120px; /* ~11" at 96dpi */
+  margin: 40px auto;
+  padding: 60px;
+
+  background: #f4f1e9; /* aged paper */
+  color: #111;
+
+  line-height: 1.55;
+
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  border: 1px solid #ccc;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  page-break-after: always;
+  break-after: page;
+}
+
+.page,
+.page * {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12pt;
+}
+
+/* Paper aging / typewriter scan lines */
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.015),
+    rgba(0,0,0,0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+/* ======================================================
+   CLASSIFICATION
+====================================================== */
+
+.classification {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12pt;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.top-secret {
+  color: darkred;
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 16pt;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin-top: 5px;
+  font-size: 14pt;
+  font-weight: normal;
+}
+
+/* ======================================================
+   METADATA
+====================================================== */
+
+.meta {
+  font-size: 11pt;
+  margin-bottom: 30px;
+}
+
+.meta div {
+  margin-bottom: 4px;
+}
+
+/* ======================================================
+   BODY CONTENT
+====================================================== */
+
+.content {
+  flex-grow: 1;
+}
+
+.content p {
+  font-size: 12pt;
+  line-height: 1.55;
+  text-align: justify;
+  text-indent: 40px;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.content h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+/* ======================================================
+   LISTS
+====================================================== */
+
+.content ul {
+  margin-left: 60px;
+  margin-bottom: 18px;
+  font-size: 12pt;
+}
+
+.content li {
+  margin-bottom: 6px;
+}
+
+/* ======================================================
+   DECLASSIFIED STAMP
+====================================================== */
+
+.stamp {
+  position: absolute;
+  top: 120px;
+  right: 60px;
+
+  transform: rotate(-12deg);
+
+  border: 3px solid darkred;
+  color: darkred;
+
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 18px;
+
+  opacity: 0.75;
+  background: rgba(255,255,255,0.1);
+  pointer-events: none;
+}
+
+/* ======================================================
+   CODE BLOCKS (Typed Annex Style)
+====================================================== */
+
+.code-block {
+  background: #f4f1e9;
+  color: #111;
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  font-size: 11pt;
+  line-height: 1.45;
+
+  border: 1px solid #999;
+
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
+
+}
+
+/* ======================================================
+   IMAGES + CAPTIONS
+====================================================== */
+
+.memo-image {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.memo-image img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border: 1px solid #aaa;
+}
+
+.memo-image .caption {
+  margin-top: 6px;
+  font-size: 10pt;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #333;
+}
+
+/* ======================================================
+   FOOTER & PAGE NUMBER
+====================================================== */
+
+.doc-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 10pt;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  font-size: 10pt;
+  color: #555;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 700px) {
+  .page {
+    padding: 30px;
+  }
+
+  .stamp {
+    top: 100px;
+    right: 30px;
+    font-size: 16px;
+  }
+
+  .content p {
+    font-size: 11pt;
+  }
+}

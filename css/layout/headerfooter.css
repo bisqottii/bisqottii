@@ -1,0 +1,23 @@
+.top-bar,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-color: rgba(120,170,200,0.15);
+}
+
+.top-bar {
+  font-size: 0.7rem;
+  color: #7fa6bb;
+  border-bottom: 1px solid;
+}
+
+.footer {
+  font-size: 0.6rem;
+  color: #5f7f8f;
+  border-top: 1px solid;
+}
+
+.status {
+  color: #9fd4ff;
+}

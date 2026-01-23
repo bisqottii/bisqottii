@@ -1,0 +1,29 @@
+.hero {
+  position: relative;
+  z-index: 5;
+
+  text-align: center;
+
+  border-bottom: 1px solid rgba(120,170,200,0.12);
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.hero h2 {
+  position: relative;
+
+  font-size: 2.4rem;
+  letter-spacing: 0.18em;
+  color: #b8e6ff;
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #7fa6bb;
+}

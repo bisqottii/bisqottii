@@ -1,0 +1,12 @@
+.glitch-in {
+  opacity: 0;
+  transform: translateX(-6px);
+  filter: blur(2px);
+}
+
+.glitch-in.active {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+  animation: glitch-in 0.45s steps(2, end) forwards;
+}

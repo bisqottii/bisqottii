@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/operationlogs.css" />
+    <link rel="stylesheet" href="css/operationlogs.css"/>
   </head>
 
   <body>
@@ -28,44 +28,57 @@
       </div>
     </header>
 
-    <main class="layout">
+    <main class="files">
 
       <section class="content">
 
         <!-- ARTICLE 1 -->
-        <article class="excerpt glitch-in"
-          data-title="Designing an Intermediate Representation as a Language"
-          data-tags="compiler">
+        <article class="file-card glitch-in"
+            data-title="Designing an Intermediate Representation as a Language"
+            data-tags="compiler">
 
-          <img src="../devlogs/file-1.png" class="excerpt-banner">
-          <time>January 2026</time>
-          <!-- <span class="tag-status tag-active">ACTIVE</span> -->
-          <span class="tag-locked">LOCKED</span>
-
+          <div class="file-card-header">
+            <span class="file-id">FILE-001</span>
+            <span class="tag-active">ACTIVE</span>
+          </div>
+          
+          <!-- Banner -->
+          <img src="assets/compiler/file-1.png" class="file-banner" alt="IR diagram">
+          
+          <!-- Title -->
+          <time datetime="2026-01-22">January 2026</time>
           <h3>
             Designing an Intermediate Representation as a Language
           </h3>
 
+          <!-- Description -->
           <p>
             A register-based SSA virtual assembly language inspired by LLVM IR.
             Lowering and optimization stages with <span class="redacted">[REDACTED]</span> 
             remain confidential.
           </p>
 
+          <!-- Access link -->
           <span class="glitch glitch-in">
-            <a href="../devlogs/file-1.html" class="link-style-small">ACCESS LOG</a>
+            <a href="operation-logs/compiler/file-1.html" class="link-style-small">ACCESS LOG</a>
           </span>
-          <!-- <div class="transmission-break">TRANSMISSION INTERRUPTED</div> -->
+
         </article>
 
-        <article class="excerpt"
+
+
+        <article class="file-card glitch-in locked"
           data-title="Optimizing Rendering Pipeline"
           data-tags="rendering">
-          
-          <img src="../devlogs/temp.jpg" class="excerpt-banner">
-          <time>April 2026</time>
-          <span class="tag-status tag-locked">LOCKED</span>
 
+          <div class="file-card-header">
+            <span class="file-id">FILE-002</span>
+            <span class="tag-locked">LOCKED</span>
+          </div>
+          
+          <img src="assets/temp.jpg" class="file-banner">
+          
+          <time>April 2026</time>
           <h3>
             Optimizing Rendering Pipeline
           </h3>
@@ -98,9 +111,9 @@
       <span>VANCOUVER B.C.</span>
     </footer>
 
-    <script src="../js/search.js"></script>
-    <script src="../js/generaleffects.js"></script>
-    <script src="../js/pagechange.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/generaleffects.js"></script>
+    <script src="js/pagechange.js"></script>
 
   </body>
 </html>
