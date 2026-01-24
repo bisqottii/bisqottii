@@ -21,14 +21,8 @@ body {
 
   color: #cfd9df;
   filter: contrast(1.05) saturate(0.92);
-
-  opacity: 0;
-  transition: opacity 0.2s ease;
 }
 
-body.fade-in {
-  opacity: 1;
-}
 
 /* ======================================================
    NUMBERS STATION

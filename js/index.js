@@ -21,7 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // START-UP SCREEN / CRT SWEEP
   // ==============================
   const screen = document.querySelector(".start-up-screen");
-  if (!screen) return;
+  if (!screen) {
+    document.querySelectorAll(".glitch-in").forEach(el =>
+      el.classList.add("active")
+    );
+    return;
+  }
 
   // Only show once per session
   if (sessionStorage.getItem("startupShown")) {
