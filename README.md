@@ -1,24 +1,18 @@
-![](https://github.com/user-attachments/assets/05f58cfc-84ab-4ffc-b97d-9b1a67cac8c8)
+<img width="6500" height="1512" alt="glass-mini" src="https://github.com/user-attachments/assets/99a3e70c-7473-4584-8526-b286558b6864" />
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=bisqq&color=orange&style=flat-square&label=PROFILE+VIEWS" />
+  <div align="center">
+    <img src="https://komarev.com/ghpvc/?username=bisqq&color=orange&style=flat-square&label=PROFILE+VIEWS" />
+  </div>
+  
+  <a href="https://www.linkedin.com/in/alex-biscoveanu-1048221aa/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" />
+  </a>
+  
+  <a href="https://bisqottii.github.io/bisqottii/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Portfolio-ffffff?style=flat&logoColor=black" />
+  </a>
 </div>
-
-<br/>
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/alex-biscoveanu-1048221aa/" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" />
-</a>
-
-<a href="https://bisqottii.github.io/bisqottii/" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Portfolio-ffffff?style=flat&logoColor=black" />
-</a>
-
-</div>
-
-<br/>
 
 <div align="center">
   <h3>
