@@ -118,44 +118,4 @@ body {
   padding-left: 6rem;
 }
 
-/* ======================================================
-  START UP SCREEN
-====================================================== */
-
-.start-up-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  pointer-events: none;
-
-  background: #000;
-  opacity: 1;
-}
-
-.start-up-screen::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.25;
-
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.05),
-    rgba(255,255,255,0.05) 1px,
-    transparent 1px,
-    transparent 4px
-  );
-}
-
-.start-up-screen.sweep::after {
-  opacity: 1;
-  animation: scan-sweep 0.6s linear forwards;
-}
-
-@keyframes scan-sweep {
-  from { transform: translateY(-100%); }
-  to   { transform: translateY(100%); }
-}
-
 
