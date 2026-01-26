@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CLASSIFIED FILES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/classifiedfiles.css">
+</head>
+
+<body>
+
+  <!-- ENVIRONMENT -->
+  <div class="noise"></div>
+  <div class="crt-bezel"></div>
+  <div class="sync-line"></div>
+  <div class="scanlines"></div>
+  <div class="atmosphere"></div>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <span class="status">CLASSIFIED FILES</span>
+    <span class="location">CENTRAL INTELLIGENCE DATABASE</span>
+  </header>
+
+  <!-- HERO -->
+  <header class="hero">
+    <a href="index.html" class="return-link link-style-small glitch glitch-in" data-text="RETURN">RETURN</a>
+
+    <div class="hero-inner">
+      <h2 class="title glitch-in">CLASSIFIED FILES</h2>
+      <p class="glitch-in">Technical Assets</p>
+    </div>
+  </header>
+
+  <!-- FILE LIST -->
+  <main class="files">
+    <section class="content card-grid">
+
+      <article class="file-card glitch-in" data-title="OSL CI Build" data-tags="contributions">
+        <div class="file-card-header">
+          <span class="file-id glitch-in">FILE-001</span>
+          <span class="tag-active glitch-in">ACTIVE</span>
+        </div>
+
+        <h3 class="glitch-in">OSL CI BUILD</h3>
+
+        <p class="glitch-in">
+          Added Conda environment setup and dependency installation script.
+        </p>
+
+        <div class="file-card-meta">
+          <span class="glitch-in">BASH</span>
+          <span class="glitch-in">LINUX</span>
+        </div>
+
+        <a href="https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/pull/2023#event-22299094378" class="link-style-small glitch glitch-in">ACCESS FILES</a>
+      </article>
+
+      <article class="file-card glitch-in locked" data-title="Mantle Project" data-tags="compiler">
+        <div class="file-card-header">
+          <span class="file-id glitch-in">FILE-001</span>
+          <span class="tag-locked glitch-in">LOCKED</span>
+        </div>
+
+        <h3 class="glitch-in">MANTLE PROJECT</h3>
+
+        <p class="glitch-in">
+          A register-based SSA virtual assembly language inspired by LLVM IR.
+        </p>
+
+        <div class="file-card-meta">
+          <span class="glitch-in">LLVM</span>
+          <span class="glitch-in">C++</span>
+          <span class="glitch-in">LINUX</span>
+        </div>
+
+        <a class="link-style-small disabled glitch-in">ACCESS DENIED</a>
+      </article>
+
+      <article class="file-card glitch-in locked" data-title="Vulkan Renderer" data-tags="rendering">
+        <div class="file-card-header">
+          <span class="file-id glitch-in">FILE-001</span>
+          <span class="tag-locked glitch-in">LOCKED</span>
+        </div>
+
+        <h3 class="glitch-in">VULKAN RENDERER</h3>
+
+        <p class="glitch-in">
+          Vulkan-based renderer.
+        </p>
+
+        <div class="file-card-meta">
+          <span class="glitch-in">VULKAN</span>
+          <span class="glitch-in">C++</span>
+          <span class="glitch-in">SDL</span>
+          <span class="glitch-in">RENDERDOC</span>
+          <span class="glitch-in">WINDOWS 10</span>
+        </div>
+
+        <a class="link-style-small disabled glitch-in">ACCESS DENIED</a>
+      </article>
+
+    </section>
+
+    <aside class="sidebar">
+      <input id="searchBox" class="search glitch-in" placeholder="Search Logs..." />
+
+      <h4 class="glitch-in">Categories</h4>
+      <ul class="search-tags">
+        <li class="glitch-in"><a href="#" data-tag="contributions">Open Source Contributions</a></li>
+        <li class="glitch-in"><a href="#" data-tag="compiler">Compiler</a></li>
+        <li class="glitch-in"><a href="#" data-tag="rendering">Rendering</a></li>
+        <li class="glitch-in"><a href="#" data-tag="all">Show all</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>SPECIAL ACCCESS</span>
+    <span>END OF RECORD</span>
+  </footer>
+
+</body>
+
+<script src="js/generaleffects.js"></script>
+<script src="js/glitchin.js"></script>
+<script src="js/search.js"></script>
+
+</html>

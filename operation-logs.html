@@ -17,11 +17,13 @@
     <div class="atmosphere"></div>
 
     <header class="top-bar">
-      <span class="status">SECURE CHANNEL</span>
-      <span class="location">CLASSIFIED OPERATIONS</span>
+      <span class="status">OPERATION LOGS</span>
+      <span class="location">CENTRAL INTELLIGENCE DATABASE</span>
     </header>
 
     <header class="hero">
+      <a href="index.html" class="return-link link-style-small glitch glitch-in" data-text="RETURN">RETURN</a>
+
       <div class="hero-inner">
         <h2 class="title glitch-in">OPERATION LOGS</h2>
         <p class="glitch-in">Rendering · Systems · Performance</p>
@@ -29,21 +31,20 @@
     </header>
 
     <main class="files">
-
       <section class="content">
 
         <!-- ARTICLE 1 -->
-        <article class="file-card glitch-in"
+        <article class="file-card glitch-in locked"
             data-title="Designing an Intermediate Representation as a Language"
             data-tags="compiler">
 
           <div class="file-card-header">
             <span class="file-id">FILE-001</span>
-            <span class="tag-active">ACTIVE</span>
+            <span class="tag-locked">LOCKED</span>
           </div>
           
           <!-- Banner -->
-          <img src="assets/compiler/file-1.png" class="file-banner" alt="IR diagram">
+          <img src="assets/file-1.png" class="file-banner" alt="IR diagram">
           
           <!-- Title -->
           <time datetime="2026-01-22">January 2026</time>
@@ -59,37 +60,10 @@
           </p>
 
           <!-- Access link -->
-          <span class="glitch glitch-in">
-            <a href="operation-logs/compiler/file-1.html" class="link-style-small">ACCESS LOG</a>
-          </span>
-
-        </article>
-
-
-
-        <article class="file-card glitch-in locked"
-          data-title="Optimizing Rendering Pipeline"
-          data-tags="rendering">
-
-          <div class="file-card-header">
-            <span class="file-id">FILE-002</span>
-            <span class="tag-locked">LOCKED</span>
-          </div>
-          
-          <img src="assets/temp.jpg" class="file-banner">
-          
-          <time>April 2026</time>
-          <h3>
-            Optimizing Rendering Pipeline
-          </h3>
-
-          <p>
-            Low-level GPU optimizations with 
-            <span class="redacted">[CLASSIFIED]</span> shader techniques.
-          </p>
-
+          <!-- <span class="glitch glitch-in">
+            <a href="operation-logs/file-1.html" class="link-style-small">ACCESS LOG</a>
+          </span> -->
           <div class="transmission-break">TRANSMISSION INTERRUPTED</div>
-
         </article>
         
       </section>
@@ -99,21 +73,20 @@
 
         <h4 class="glitch-in">Categories</h4>
         <ul class="search-tags">
-          <li class="glitch-in"><a href="#" data-tag="compiler">compiler</a></li>
-          <li class="glitch-in"><a href="#" data-tag="rendering">rendering</a></li>
+          <li class="glitch-in"><a href="#" data-tag="compiler">Compiler</a></li>
           <li class="glitch-in"><a href="#" data-tag="all">Show all</a></li>
         </ul>
       </aside>
     </main>
 
     <footer class="footer">
-      <span>CLASSIFIED // EYES ONLY</span>
-      <span>VANCOUVER B.C.</span>
+      <span>SPECIAL ACCCESS</span>
+      <span>END OF RECORD</span>
     </footer>
 
     <script src="js/search.js"></script>
     <script src="js/generaleffects.js"></script>
-    <script src="js/pagechange.js"></script>
+    <script src="js/glitchin.js"></script>
 
   </body>
 </html>

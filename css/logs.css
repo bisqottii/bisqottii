@@ -3,8 +3,10 @@
 
 @import url("effects/crt.css");
 @import url("effects/glitchin.css");
+@import url("effects/links.css");
 
 @import url("layout/headerfooter.css");
+@import url("layout/hero.css");
 
 @import url("styles/redacted.css");
 

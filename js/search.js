@@ -4,7 +4,9 @@ const articles = document.querySelectorAll(".file-card");
 const tagLinks = document.querySelectorAll(".search-tags a");
 const content = document.querySelector(".content");
 
-/* TAG COUNTS */
+/* ======================================================
+   TAG COUNTS
+====================================================== */
 const tagCounts = {};
 articles.forEach(a =>
   a.dataset.tags.split(" ").forEach(t =>
@@ -16,36 +18,69 @@ tagLinks.forEach(l => {
   if (tagCounts[t]) l.textContent += ` (${tagCounts[t]})`;
 });
 
-/* HIGHLIGHT */
+/* ======================================================
+   HIGHLIGHT FUNCTION
+====================================================== */
 function highlight(text, q) {
   if (!q) return text;
   return text.replace(new RegExp(`(${q})`, "gi"), "<mark>$1</mark>");
 }
 
-/* SEARCH */
+/* ======================================================
+   NO RESULTS ELEMENT
+====================================================== */
+let noResults = document.createElement("p");
+noResults.textContent = "No results found";
+noResults.style.textAlign = "center";
+noResults.style.fontStyle = "italic";
+noResults.style.color = "#cfd9df"; // match your theme
+noResults.style.display = "none"; // hidden by default
+content.appendChild(noResults);
+
+/* ======================================================
+   SEARCH
+====================================================== */
 searchBox.addEventListener("input", e => {
   const q = e.target.value.toLowerCase();
+  let hasMatch = false;
+
   articles.forEach(a => {
-    const h = a.querySelector("h3");
-    const title = a.dataset.title;
-    const match = title.toLowerCase().includes(q) ||
-                  a.dataset.tags.includes(q);
+    const title = a.dataset.title.toLowerCase();
+    const tags = a.dataset.tags.toLowerCase();
+    const match = title.includes(q) || tags.includes(q);
+
     a.style.display = match ? "" : "none";
-    h.innerHTML = highlight(title, q);
+    if (match) hasMatch = true;
+
+    const h = a.querySelector("h3");
+    h.innerHTML = highlight(a.dataset.title, q);
   });
+
+  // Show/hide "No results" message
+  noResults.style.display = hasMatch ? "none" : "";
 });
 
-/* TAG FILTER */
+/* ======================================================
+   TAG FILTER
+====================================================== */
 tagLinks.forEach(l => l.addEventListener("click", e => {
   e.preventDefault();
   const tag = l.dataset.tag;
-  articles.forEach(a =>
-    a.style.display =
-      tag === "all" || a.dataset.tags.includes(tag) ? "" : "none"
-  );
+  let hasMatch = false;
+
+  articles.forEach(a => {
+    const match = tag === "all" || a.dataset.tags.includes(tag);
+    a.style.display = match ? "" : "none";
+    if (match) hasMatch = true;
+  });
+
+  // Show/hide "No results" message for tag filter
+  noResults.style.display = hasMatch ? "none" : "";
 }));
 
-/* SORT */
+/* ======================================================
+   SORT
+====================================================== */
 sortSelect.addEventListener("change", () => {
   [...articles]
     .sort((a, b) =>

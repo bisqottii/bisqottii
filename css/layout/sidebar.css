@@ -1,0 +1,53 @@
+/* ======================================================
+   SIDEBAR (INTEL PANEL)
+====================================================== */
+
+.sidebar {
+  padding-left: 2rem;
+  border-left: 1px solid rgba(120,170,200,0.15);
+  width: 260px;
+}
+
+.search {
+  width: 100%;
+  padding: 0.6rem;
+
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(120,170,200,0.25);
+
+  color: #cfd9df;
+  font-family: inherit;
+  font-size: 0.75rem;
+}
+
+.sidebar h4 {
+  margin: 2rem 0 0.6rem;
+
+  font-family: var(--font-main);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #9fd4ff;
+}
+
+.search-tags {
+  list-style: none;
+}
+
+.search-tags li {
+  margin-bottom: 0.4rem;
+}
+
+.search-tags a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #8aa9bb;
+}
+
+.search-tags a.active {
+  font-weight: bold;
+  color: #9fd4ff;
+}
+
+.search-tags a:hover {
+  color: #e6f6ff;
+}

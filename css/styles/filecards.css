@@ -1,3 +1,13 @@
+.files {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+
 .file-card {
     background: rgba(4,12,18,0.35);
     border-left: 2px solid var(--border-left-color);
