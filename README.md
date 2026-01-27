@@ -10,23 +10,14 @@
   </a>
   
   <a href="https://bisqottii.github.io/bisqottii/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Portfolio-ffffff?style=flat&logoColor=black" />
+    <img src="https://img.shields.io/badge/Personal Website-ffffff?style=flat&logoColor=black" />
   </a>
-</div>
-
-<div align="center">
-  <h3>
-    Rendering · Operating Systems · Compilers · Tools Development · Game Dev · Audio Programming
-  </h3>
 </div>
 
 ---
 
 <p align="center">
-Hi, I’m Alex, I'm a software engineer working mostly in low-level systems, graphics, compilers, and tooling.  
-I like digging into hard problems that sit close to the hardware and figuring out how things actually work.  
-A lot of my time goes into performance, rendering, and systems design, and I stay sharp by reading papers  
-and watching talks from places like <b>ACM SIGGRAPH</b>, <b>GDC</b>, <b>CppCon</b> and many more.
+Hi, I’m Alex, I like digging into hard problems that sit close to the hardware and figuring out how things actually work. I stay sharp by reading papers and watching talks from places like ACM SIGGRAPH, GDC, CppCon, and many more. Check out my personal website for more!
 </p>
 
 ---
