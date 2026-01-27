@@ -1,0 +1,28 @@
+/* ======================================================
+   TRANSMISSION INTERRUPTED
+====================================================== */
+
+.transmission-break {
+  margin: 3rem 0;
+  padding: 0.5rem 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: var(--font-main);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #ff5555;
+
+  border-top: 1px dashed rgba(255,85,85,0.3);
+  border-bottom: 1px dashed rgba(255,85,85,0.3);
+
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.5; }
+  45%      { opacity: 0.2; }
+  50%      { opacity: 0.6; }
+  55%      { opacity: 0.25; }
+}
